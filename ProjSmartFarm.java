@@ -43,11 +43,11 @@ public class ProjSmartFarm extends Application {
         AgriculturalLand land1 = new AgriculturalLand("Поле номер 1", 200, plants);
         AgriculturalLand land2 = new AgriculturalLand("Поле номер 2", 100, plants);
         
-        DroneTractorWithCultivator tractor = new DroneTractorWithCultivator();
+        DroneTractorWithCultivator tractor = new DroneTractorWithCultivator(land1, land2);
         SeedingMachine seedingMachine = new SeedingMachine(land1, land2, plants);
-        RoboticHarvester roboticHarvester = new RoboticHarvester();     
+        RoboticHarvester roboticHarvester = new RoboticHarvester(plants);     
         
-        FieldMenu menu = new FieldMenu(500,20, land1, land2, tractor, seedingMachine, roboticHarvester); 
+        FieldMenu menu = new FieldMenu(500,20, plants, land1, land2, tractor, seedingMachine, roboticHarvester); 
 
 
     }

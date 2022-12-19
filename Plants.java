@@ -5,12 +5,20 @@ package projsmartfarm;
  */
 public class Plants {
 
-    public double getCrop() {
-        return crop;
+    public double getSumMoney() {
+        return sumMoney;
     }
 
-    public void setCrop(double crop) {
-        this.crop = crop;
+    public void setSumMoney(double sumMoney) {
+        this.sumMoney = sumMoney;
+    }
+
+    public int getSumCrop() {
+        return sumCrop;
+    }
+
+    public void setSumCrop(int sumCrop) {
+        this.sumCrop = sumCrop;
     }
 
     public static int getNumOfPlantSpecies() {
@@ -37,15 +45,13 @@ public class Plants {
         this.nameOfPlant = nameOfPlant;
     }
 
-    public void setCost(int cost) {
-        this.cost = cost;
-    }
     
     private static int numOfPlantSpecies = 0;
     private final int PlantSpecieID;
     private String nameOfPlant;
     private int cost;
-    private double crop = 0; //количество выращенного урожая (зависит от вида урожая и единиц посаженного) настраивает сборщик
+    private int sumCrop = 0; //количество выращенного урожая (со всех полей) настраивает сборщик
+    private double sumMoney = 0;
     
     //Конструктор
     public Plants(String nameOfPlant, int cost) { 
